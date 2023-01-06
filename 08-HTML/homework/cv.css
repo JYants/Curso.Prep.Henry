@@ -1,0 +1,17 @@
+
+#cv{
+
+    border: 2px solid black;
+    margin: 30px;
+}
+#cv #introduccion{
+    border: 3px solid red;
+    padding: 10px;
+    text-align: center;
+}
+#cv #introduccion h1{
+    font-size: 30px;
+}
+#cv #introduccion p{
+    font-size: 18px;
+}
