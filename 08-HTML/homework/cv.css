@@ -1,17 +1,43 @@
 
-#cv{
+#cv, #carrera{
 
     border: 2px solid black;
     margin: 30px;
+    box-shadow: 2px 2px 2px .5px black;
+    border-radius: 5px;
+}
+.tituloYfoto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cv .tituloYfoto h1{
+    font-size: 30px;
+    margin-left: 30px;
+}
+.tituloYfoto img{
+    height: 150px;
+    width: 150px;
+    margin-right: .5px;
 }
 #cv #introduccion{
-    border: 3px solid red;
     padding: 10px;
-    text-align: center;
 }
-#cv #introduccion h1{
-    font-size: 30px;
+#cv #introduccion, #cv #educacion, #cv .carta, h2{
+    /* border: 3px solid red; */
+    /* background-color: rgba(0, 0, 0, 0.226); */
+    text-align: center;
 }
 #cv #introduccion p{
     font-size: 18px;
+}
+h2{
+    text-decoration: underline;
+}
+#carrera{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
 }
