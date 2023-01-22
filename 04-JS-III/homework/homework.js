@@ -10,7 +10,8 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return (array.length() - 1);
+  // Return array.length - 1 devuelve el key del elemento, no el elemento en si. 
+  return array[array.length - 1];
 }
 
 
@@ -26,8 +27,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  array[+1];
-  return array;
+  let arrayIncrementado = []
+  for (let i = 0; i < array.length; i++){
+    arrayIncrementado.push(array[i] + 1);
+  }
+  return arrayIncrementado;
 }
 
 
@@ -56,6 +60,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  
 }
 
 
