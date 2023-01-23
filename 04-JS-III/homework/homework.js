@@ -60,7 +60,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  
+  return palabras.join(" ");
 }
 
 
@@ -68,12 +68,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  if (array[elemento] === true){
-    return true;
+  for (let i = 0; i < array.length; i++){
+    if (array[i] == elemento){
+      return true
+    }
   }
-  else{
-    return false;
-  }
+  return false;
 }
 
 
@@ -81,6 +81,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let acumulador = 0;
+  for (let i = 0; i < numeros.length; i++){
+    acumulador += numeros[i];
+  }
+  return acumulador;
 }
 
 
@@ -88,6 +93,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let prom = 0;
+  for (let i = 0; i < resultadosTest.length; i++){
+    prom += resultadosTest[i] / resultadosTest.length;
+  }
+  return Math.floor(prom);
 }
 
 
@@ -95,8 +105,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let max = 0;
+  for (let numero of numeros){
+    if (max < numero){
+      max = numero;
+    }
+  }
+  return max;
 }
-
+// Diferencias entre loops (for, forEach, forIn, forOf): https://www.youtube.com/watch?v=Xax0GUlSjpk&ab_channel=SomosProgramadores
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
@@ -108,7 +125,6 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
 }
 
 
